@@ -33,6 +33,7 @@ def draw_text(text, size, color, x, y):
     screen.blit(text_surface, text_rect)
 
 def run_game():
+    global obstacles  # Declare obstacles as global
     score = 0
 
     while True:
@@ -57,6 +58,7 @@ def run_game():
                 draw_text("Game Over", 64, WHITE, WIDTH // 2, HEIGHT // 2)
                 pygame.display.flip()
                 pygame.time.wait(2000)
+                obstacles = []  # Reset obstacles
                 return  # End the game
 
         # Remove off-screen obstacles
