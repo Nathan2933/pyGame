@@ -30,6 +30,7 @@ def draw_text(text, size, color, x, y):
     font = pygame.font.Font(None, size)
     text_surface = font.render(text, True, color)
     text_rect = text_surface.get_rect(center=(x, y))
+
     screen.blit(text_surface, text_rect)
 
 def run_game():
